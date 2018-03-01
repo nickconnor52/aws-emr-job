@@ -21,8 +21,8 @@ fi
 # VM_USER is your user name on the HADOOP_VM
 # LOCAL_USER is your user name on your local development environment.
 
-VM_USER="bfrench"
-LOCAL_USER="bernie"
+VM_USER="nconnor"
+LOCAL_USER="NickConnor"
 
 project_name="joinFDADataWithCrunch"
 mainclass="com.superh.awsemr.spike.fdajoin.FDAJoinCrunchJob"
