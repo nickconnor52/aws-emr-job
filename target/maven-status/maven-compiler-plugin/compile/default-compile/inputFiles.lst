@@ -1,0 +1,7 @@
+/Users/NickConnor/work/data-analytics/aws-emr-test/target/generated-sources/com/superh/awsemr/spike/avro/FDAProduct.java
+/Users/NickConnor/work/data-analytics/aws-emr-test/src/main/java/com/superh/awsemr/spike/fdajoin/ConvertFDAApplicationCsvToAvro.java
+/Users/NickConnor/work/data-analytics/aws-emr-test/src/main/java/com/superh/awsemr/spike/fdajoin/ConvertFDAProductCsvToAvro.java
+/Users/NickConnor/work/data-analytics/aws-emr-test/src/main/java/com/superh/awsemr/spike/fdajoin/MergeFDAApplicationWithProductsCogroup.java
+/Users/NickConnor/work/data-analytics/aws-emr-test/target/generated-sources/com/superh/awsemr/spike/avro/FDAApplication.java
+/Users/NickConnor/work/data-analytics/aws-emr-test/target/generated-sources/com/superh/awsemr/spike/avro/FDAApplicationProtocol.java
+/Users/NickConnor/work/data-analytics/aws-emr-test/src/main/java/com/superh/awsemr/spike/fdajoin/FDAJoinCrunchJob.java
