@@ -50,8 +50,8 @@ jar="${install_dir}/${simple_jar_name}"
 # Create the paths where you will read and write the data.
 # These paths are HDFS file paths out on the Hadoop VM
 
-fda_application_csv_input="-Dfda.application.csv.input=s3://sprh-data/hadoop-test/FDAApplications.test.txt"
-fda_product_csv_input="-Dfda.product.csv.input=s3://sprh-data/hadoop-test/FDAProducts.test.txt"
+fda_application_csv_input="-Dfda.application.csv.input=s3://sprh-data/hadoop-test/FDAApplication"
+fda_product_csv_input="-Dfda.product.csv.input=s3://sprh-data/hadoop-test/FDAProduct"
 fda_application_avro_output="-Dfda.application.avro.output=s3://sprh-data/hadoop-test/fda-joined"
 
 echo "FDA_APPLICATION_CSV_INPUT_PATH=${fda_application_csv_input}"
