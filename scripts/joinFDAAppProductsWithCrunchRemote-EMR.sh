@@ -31,7 +31,7 @@ mainclass="com.superh.awsemr.spike.fdajoin.FDAJoinCrunchJob"
 # this is the directory where the job jar will be copied from
 # your local machine to the Hadoop VM
 
-install_dir="/tmp/hadoop-${VM_USER}/$project_name"
+install_dir="s3://sprh-data/hadoop-test" # install_dir="/tmp/hadoop-${VM_USER}/$project_name"
 echo "INSTALL DIRECTORY: ${install_dir}"
 
 # Create the path to the local Hadoop job jar.

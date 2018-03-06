@@ -113,8 +113,8 @@ public class FDAJoinCrunchJob extends Configured implements Tool {
 		/*
 		 * Write out the results
 		 */
-		
-//		pipeline.write(fdaApplication.values(), To.avroFile(fdaApplicationOutputPath));
+		System.out.println("---- Writing Output ----");
+		pipeline.write(fdaApplication.values(), To.textFile(fdaApplicationOutputPath));
 				
 		/*
 		 * Check the result to see if the pipeline succeeded.
@@ -124,6 +124,7 @@ public class FDAJoinCrunchJob extends Configured implements Tool {
 		PipelineResult result = pipeline.done();
 		
 		if (result.succeeded()) {
+			System.out.println("---- Success ----");
 			return 0;
 		} else {
 			System.out.println("Pipeline failed... You did something wrong...");
