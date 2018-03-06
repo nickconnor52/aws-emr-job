@@ -114,12 +114,13 @@ public class FDAJoinCrunchJob extends Configured implements Tool {
 		 * Write out the results
 		 */
 		
-		pipeline.write(fdaApplication.values(), To.avroFile(fdaApplicationOutputPath));
+//		pipeline.write(fdaApplication.values(), To.avroFile(fdaApplicationOutputPath));
 				
 		/*
 		 * Check the result to see if the pipeline succeeded.
 		 */
 		
+		System.out.println("---- Checking Results ----");
 		PipelineResult result = pipeline.done();
 		
 		if (result.succeeded()) {
