@@ -35,6 +35,8 @@ public class MergeFDAApplicationWithProductsCogroup extends DoFn<Pair<String, Pa
 	public void process(Pair<String, Pair<Collection<FDAApplication>, Collection<FDAProduct>>> fdaAppProdCollections,
 			Emitter<Pair<String, FDAApplication>> emitter) {
 		
+		System.out.println("---- FDA MERGER ----");
+
 		/*
 		 * Get the application number and the FDAApplication and FDAProduct
 		 * Collections.
@@ -60,7 +62,7 @@ public class MergeFDAApplicationWithProductsCogroup extends DoFn<Pair<String, Pa
 		/*
 		 * Emit the Application Number, FDAApplication pair.
 		 */
-		
+		System.out.println("FDA APP NUMBER --> " + fdaAppNumber);
 		emitter.emit(Pair.of(fdaAppNumber, application));
 	}
 }

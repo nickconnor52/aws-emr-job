@@ -31,7 +31,7 @@ mainclass="com.superh.awsemr.spike.fdajoin.FDAJoinCrunchJob"
 # this is the directory where the job jar will be copied from
 # your local machine to the Hadoop VM
 
-install_dir="/tmp/hadoop-${VM_USER}/$project_name"
+install_dir="s3://sprh-data/hadoop-test" # install_dir="/tmp/hadoop-${VM_USER}/$project_name"
 echo "INSTALL DIRECTORY: ${install_dir}"
 
 # Create the path to the local Hadoop job jar.
@@ -50,8 +50,14 @@ jar="${install_dir}/${simple_jar_name}"
 # Create the paths where you will read and write the data.
 # These paths are HDFS file paths out on the Hadoop VM
 
-fda_application_csv_input="-Dfda.application.csv.input=s3://sprh-data/hadoop-test/FDAApplication"
-fda_product_csv_input="-Dfda.product.csv.input=s3://sprh-data/hadoop-test/FDAProduct"
+# fda_application_csv_input="-Dfda.application.csv.input=s3://sprh-data/hadoop-test/FDAApplication"
+# fda_product_csv_input="-Dfda.product.csv.input=s3://sprh-data/hadoop-test/FDAProduct"
+# fda_application_avro_output="-Dfda.application.avro.output=s3://sprh-data/hadoop-test/fda-joined"
+
+fda_application_csv_input="-Dfda.application.csv.input=/tutorial-data-in/fda-join-crunch/fda-applications"
+fda_product_csv_input="-Dfda.product.csv.input=/tutorial-data-in/fda-join-crunch/fda-products"
+
+#fda_product_csv_input="-Dfda.product.csv.input=/Users/NickConnor/work/data-analytics/aws-emr-test/resources/FDAProducts.test.txt"
 fda_application_avro_output="-Dfda.application.avro.output=s3://sprh-data/hadoop-test/fda-joined"
 
 echo "FDA_APPLICATION_CSV_INPUT_PATH=${fda_application_csv_input}"
